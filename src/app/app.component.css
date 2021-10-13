@@ -1,0 +1,72 @@
+.rahmen {
+  width: 35rem;
+  height: 50rem;
+  background: gray;
+}
+
+.kopf {
+  height: 2.5rem;
+}
+
+.oberteil {
+  display: flex;
+  width: 100%;
+}
+
+.unterteil {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.knopf_leiste_rahmen {
+  width: 5rem;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.knopf_leiste {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.knopf {
+  width: 2.5rem;
+  height: 2rem;
+  background: black;
+  color: beige;
+}
+
+.knopf_menu {
+  width: 3.5rem;
+  height: 2rem;
+  background: black;
+  color: beige;
+}
+
+.rund {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.display {
+  width: 25rem;
+  height: 20rem;
+  border: 2px solid black;
+  border-radius: 3%;
+}
+
+.große_zahl {
+  font-size: 30px;
+}
+
+.kleine_schrift {
+  font-size: 10px;
+}
+
+.rand {
+  border: 2px solid beige;
+}

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FMGS';
+
+  onClick(button: HTMLButtonElement): void {
+    console.log('Knopf gedrückt: ' + button.id);
+  }
 }
