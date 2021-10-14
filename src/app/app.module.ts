@@ -8,13 +8,17 @@ import {DirComponent} from "./pages/dir/dir.component";
 import {PROGComponent} from "./pages/prog/prog.component";
 import {HttpClientModule} from "@angular/common/http";
 import { PagesComponent } from './pages/pages.component';
+import { PerfComponent } from './pages/perf/perf.component';
+import { IntComponent } from './pages/int/int.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DirComponent,
     PROGComponent,
-    PagesComponent
+    PagesComponent,
+    PerfComponent,
+    IntComponent
   ],
   imports: [
     BrowserModule,

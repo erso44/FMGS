@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {DirComponent} from "./pages/dir/dir.component";
 import {PROGComponent} from "./pages/prog/prog.component";
+import {PerfComponent} from "./pages/perf/perf.component";
+import {IntComponent} from "./pages/int/int.component";
 
 const routes: Routes = [
   {
@@ -11,11 +13,19 @@ const routes: Routes = [
   },
   {
     path: 'DIR',
-    component: DirComponent,
+    component: DirComponent
   },
   {
     path: 'PROG',
     component: PROGComponent
+  },
+  {
+    path: 'PERF',
+    component: PerfComponent
+  },
+  {
+    path: 'INT',
+    component: IntComponent
   }
 ];
 

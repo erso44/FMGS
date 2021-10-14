@@ -7,8 +7,13 @@ import {Component, Input} from '@angular/core';
 })
 export class PagesComponent{
 
-  @Input('page') page: string | undefined;
-  @Input('leftside') leftside: string[] | undefined;
-  @Input('rightside') rightside: string[] | undefined;
+  // default
+  @Input('page') page: string = '';
+  @Input('leftside') leftside: string[] = [];
+  @Input('rightside') rightside: string[] = [];
+
+  // PERF PAGE
+  @Input('prevPage') prevPage: string = '';
+  @Input('nextPage') nextPage: string = '';
 
 }

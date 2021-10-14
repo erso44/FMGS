@@ -2,8 +2,10 @@ package server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import server.assembler.DirAssembler;
 import server.model.Dir;
+import server.model.Performance;
+import server.service.DirService;
+import server.service.PerformanceService;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -11,10 +13,15 @@ import server.model.Dir;
 public class PageController {
 
   @Autowired
-  private DirAssembler dirAssembler;
+  private DirService dirService;
+  @Autowired
+  private PerformanceService performanceService;
 
-  @GetMapping(path = "/dir")
+  @GetMapping( "/dir")
   public Dir loadDir() {
-    return dirAssembler.assemble();
+    return dirService.loadDir();
   }
+
+  @GetMapping("/perf")
+  public Performance loadPerf() { return performanceService.loadPerformance(); }
 }

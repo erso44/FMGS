@@ -3,15 +3,15 @@
 <div style="display: grid; grid-template-columns: 12.5rem 12.5rem;">
 
     <div class="linkeseite">
-      <div *ngFor="let data of leftside">
-        <p class="schrift">{{data}}</p>
+      <div *ngFor="let data of leftside; let i = index;">
+        <p *ngIf="i<6" class="schrift">{{data}}</p>
       </div>
     </div>
 
 
     <div class="rechteseite">
-      <div *ngFor="let data of rightside">
-        <p class="schrift">{{data}}</p>
+      <div *ngFor="let data of rightside; let i = index;">
+        <p *ngIf="i<6" class="schrift">{{data}}</p>
       </div>
     </div>
 
