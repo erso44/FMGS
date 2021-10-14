@@ -4,11 +4,12 @@ import {DirComponent} from "./pages/dir/dir.component";
 import {PROGComponent} from "./pages/prog/prog.component";
 import {PerfComponent} from "./pages/perf/perf.component";
 import {IntComponent} from "./pages/int/int.component";
+import {MCDUMenuComponent} from "./pages/mcdumenu/mcdumenu.component";
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'DIR',
+    redirectTo: 'MCDU_MENU',
     pathMatch: 'full'
   },
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'INT',
     component: IntComponent
+  },
+  {
+    path: 'MCDU_MENU',
+    component: MCDUMenuComponent
   }
 ];
 

@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { PagesComponent } from './pages/pages.component';
 import { PerfComponent } from './pages/perf/perf.component';
 import { IntComponent } from './pages/int/int.component';
+import { MCDUMenuComponent } from './pages/mcdumenu/mcdumenu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { IntComponent } from './pages/int/int.component';
     PROGComponent,
     PagesComponent,
     PerfComponent,
-    IntComponent
+    IntComponent,
+    MCDUMenuComponent
   ],
   imports: [
     BrowserModule,

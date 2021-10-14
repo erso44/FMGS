@@ -18,17 +18,17 @@
 .linkeseite {
   display: grid;
   padding-left: 1rem;
-  grid-template-columns: 5rem;
+  grid-template-columns: 11.5rem;
   grid-template-rows: repeat(6, 2.9rem);
-  justify-content: start;
+  justify-items: start;
   align-items: center;
 }
 
 .rechteseite {
   display: grid;
-  padding-left: 1rem;
-  grid-template-columns: 5rem;
+  padding-right: 1rem;
+  grid-template-columns: 11.5rem;
   grid-template-rows: repeat(6, 2.9rem);
   align-items: center;
-  justify-content: end;
+  justify-items: end;
 }

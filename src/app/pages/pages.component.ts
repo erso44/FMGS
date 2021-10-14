@@ -16,4 +16,7 @@ export class PagesComponent{
   @Input('prevPage') prevPage: string = '';
   @Input('nextPage') nextPage: string = '';
 
+  // MCDU MENU PAGE
+  @Input('information') information: string = '';
+
 }
