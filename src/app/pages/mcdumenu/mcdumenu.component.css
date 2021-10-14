@@ -32,3 +32,9 @@
   align-items: center;
   justify-items: end;
 }
+
+.info {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-.5rem);
+}
