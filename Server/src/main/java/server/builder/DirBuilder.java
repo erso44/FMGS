@@ -12,6 +12,11 @@ public class DirBuilder {
     direction = new Dir();
   }
 
+  public DirBuilder setPage(String page) {
+    this.direction.setPage(page);
+    return this;
+  }
+
   public DirBuilder setWaypoints(List<String> waypoints) {
     this.direction.setWaypoints(waypoints);
     return this;

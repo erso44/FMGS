@@ -9,6 +9,7 @@ import {ApiService} from "../../service/api.service";
 export class DirComponent implements OnInit {
   waypoints: string[] | undefined;
   dat: string[] | undefined;
+  page: string | undefined;
 
   constructor(private apiService: ApiService) { }
 
@@ -16,6 +17,7 @@ export class DirComponent implements OnInit {
     this.apiService.loadDir().subscribe(value => {
       this.waypoints = value.waypoints;
       this.dat = value.dat;
+      this.page= value.page;
     });
   }
 

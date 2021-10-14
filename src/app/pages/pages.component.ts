@@ -7,7 +7,8 @@ import {Component, Input} from '@angular/core';
 })
 export class PagesComponent{
 
-  @Input('leftside') leftside: any;
-  @Input('rightside') rightside: any;
+  @Input('page') page: string | undefined;
+  @Input('leftside') leftside: string[] | undefined;
+  @Input('rightside') rightside: string[] | undefined;
 
 }

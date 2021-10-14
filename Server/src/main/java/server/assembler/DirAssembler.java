@@ -11,8 +11,9 @@ public class DirAssembler {
 
   public Dir assemble() {
     return new DirBuilder()
-      .setWaypoints(List.of("waypoint1, waypoint2, waypoint3"))
-      .setDat(List.of("dat1, dat2, dat3"))
+      .setPage("DIR")
+      .setWaypoints(List.of("WAYPOINT1", "CXR2", "TEESY3", "WEVEL4", "ETG", "MIP"))
+      .setDat(List.of("1.4NM", "01 '" + " / " + "'", "DAT3"))
       .build();
   }
 }

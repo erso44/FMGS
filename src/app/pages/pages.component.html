@@ -1,8 +1,18 @@
-<div style="display: flex; flex-direction: row">
-  <div *ngFor="let data of leftside" style="display: flex; flex-direction: column;">
-    <div><p>{{data}}</p></div>
-  </div>
-  <div *ngFor="let data of rightside" style="display: flex; flex-direction: column;">
-    <p>{{data}}</p>
-  </div>
+<div class="titel">{{page}}</div>
+
+<div style="display: grid; grid-template-columns: 12.5rem 12.5rem;">
+
+    <div class="linkeseite">
+      <div *ngFor="let data of leftside">
+        <p class="schrift">{{data}}</p>
+      </div>
+    </div>
+
+
+    <div class="rechteseite">
+      <div *ngFor="let data of rightside">
+        <p class="schrift">{{data}}</p>
+      </div>
+    </div>
+
 </div>

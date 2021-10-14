@@ -1,0 +1,32 @@
+.schrift {
+  font-family: "Lucida Console", monospace;
+  color: forestgreen;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.titel {
+  display: flex;
+  color: white;
+  padding-top: .5rem;
+  justify-content: center;
+}
+
+.linkeseite {
+  display: grid;
+  padding-left: 1rem;
+  grid-template-columns: 5rem;
+  grid-template-rows: repeat(6, 2.9rem);
+  justify-content: start;
+  align-items: center;
+}
+
+.rechteseite {
+  display: grid;
+  padding-left: 1rem;
+  grid-template-columns: 5rem;
+  grid-template-rows: repeat(6, 2.9rem);
+  align-items: center;
+  justify-content: end;
+}

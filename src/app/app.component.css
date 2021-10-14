@@ -20,16 +20,17 @@
 }
 
 .knopf_leiste_rahmen {
-  width: 5rem;
-  height: 20rem;
+  padding-top: 1.5rem;
   display: flex;
-  justify-content: center;
+  padding-bottom: 1.5rem;
 }
 
 .knopf_leiste {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 5rem;
+  grid-template-rows: repeat(6, 2.9rem);
+  justify-items: center;
+  align-items: center;
 }
 
 .knopf {
@@ -57,6 +58,7 @@
   height: 20rem;
   border: 2px solid black;
   border-radius: 3%;
+  background: black;
 }
 
 .große_zahl {
