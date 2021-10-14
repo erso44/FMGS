@@ -1,1 +1,19 @@
-<app-pages [page]="page" [leftside]="menuEntriesLeft" [rightside]="menuEntryRight" [information]="information"></app-pages>
+<div class="titel">{{page}}</div>
+
+<div style="display: grid; grid-template-columns: 12.5rem 12.5rem;">
+
+  <div class="linkeseite">
+    <div *ngFor="let data of menuEntriesLeft; let i = index;">
+      <p *ngIf="i<6" class="schrift">{{data}}</p>
+    </div>
+  </div>
+
+
+  <div class="rechteseite">
+    <div style="grid-area: 6/1;">
+      <p class="schrift">{{menuEntryRight[0]}}</p>
+    </div>
+  </div>
+
+</div>
+

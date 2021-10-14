@@ -12,7 +12,8 @@ export class MCDUMenuComponent implements OnInit {
   menuEntryRight: string[] = [];
   information: string = '';
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {
+  }
 
   ngOnInit(): void {
     this.apiService.loadMCDUMenuPage().subscribe(value => {
