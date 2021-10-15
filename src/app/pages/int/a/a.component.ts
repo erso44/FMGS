@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./a.component.css']
 })
 export class AComponent implements OnInit {
+  store: string = '';
 
   page: string = '';
   menuEntriesLeft: string[][] = [];
@@ -66,29 +67,31 @@ export class AComponent implements OnInit {
           this.router.navigateByUrl('/INT/INT_B');
         }
         if (action == "1") {
-
+          this.store = this.store + action;
         } else if (action === "2") {
-
+          this.store = this.store + action;
         } else if (action === "3") {
-
+          this.store = this.store + action;
         } else if (action === "4") {
-
+          this.store = this.store + action;
         } else if (action === "5") {
-
+          this.store = this.store + action;
         } else if (action === "6") {
-
+          this.store = this.store + action;
         } else if (action === "7") {
-
+          this.store = this.store + action;
         } else if (action === "8") {
-
+          this.store = this.store + action;
         } else if (action === "9") {
-
+          this.store = this.store + action;
         } else if (action === "0") {
-
+          this.store = this.store + action;
         } else if (action === "Point") {
-
+          this.store = this.store + ".";
         } else if (action === "PlusMinus") {
-
+          this.store = this.store + action;
+        } else if (action === "Clear") {
+          this.store = this.store.substring(0, this.store.length - 1);
         }
       }
     });
