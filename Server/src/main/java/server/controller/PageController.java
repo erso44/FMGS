@@ -3,10 +3,7 @@ package server.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import server.model.Display;
-import server.service.DirectService;
-import server.service.InitPageService;
-import server.service.MCDUMenuService;
-import server.service.PerformanceService;
+import server.service.*;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -21,6 +18,13 @@ public class PageController {
   private MCDUMenuService mcduMenuService;
   @Autowired
   private InitPageService initPageService;
+  @Autowired
+  private FlightPhaseService flightPhaseService;
+
+  @GetMapping("/flightPhase")
+  public String loadFlightPhase() {
+    return flightPhaseService.loadFlightPhase();
+  }
 
   @GetMapping( "/dir")
   public Display loadDirectionPage() {

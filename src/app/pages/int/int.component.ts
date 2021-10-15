@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../service/api.service";
 import {ActionService} from "../../service/action.service";
-import {Router} from "@angular/router";
+import {AircraftService} from "../../service/aircraft.service";
 
 @Component({
   selector: 'app-int',
@@ -15,7 +15,7 @@ export class IntComponent implements OnInit {
 
   constructor(private apiService: ApiService,
               private actionService: ActionService,
-              private router: Router) { }
+              private aircraftService: AircraftService) { }
 
   ngOnInit(): void {
     this.apiService.loadInitAPage().subscribe(value => {

@@ -28,4 +28,8 @@ export class ApiService {
   loadInitAPage(): Observable<Display> {
     return this.http.get<Display>(this.HOST + 'initapage');
   }
+
+  loadFlightPhase(): Observable<string> {
+    return this.http.get<string>(this.HOST + 'flightPhase');
+  }
 }

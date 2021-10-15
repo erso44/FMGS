@@ -27,7 +27,7 @@ public class InitPageAssembler {
           List.of("LONG", "_____ __"),
           List.of("WIND>", ""),
           List.of("", "")))
-      .setPage("INIT")
+      .setPage("INIT A")
       .build();
   }
 }
