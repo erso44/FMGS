@@ -1,9 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
-import {Dir} from "../model/Dir";
-import {Performance} from "../model/Performance";
-import {MCDUMenu} from "../model/MCDUMenu";
+import {Display} from "../model/Display";
 
 @Injectable({
   providedIn: 'root'
@@ -15,15 +13,19 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  loadDir(): Observable<Dir> {
-    return this.http.get<Dir>(this.HOST + 'dir');
+  loadDir(): Observable<Display> {
+    return this.http.get<Display>(this.HOST + 'dir');
   }
 
-  loadPerformancePage(): Observable<Performance> {
-    return this.http.get<Performance>(this.HOST + 'perf');
+  loadPerformancePage(): Observable<Display> {
+    return this.http.get<Display>(this.HOST + 'perf');
   }
 
-  loadMCDUMenuPage(): Observable<MCDUMenu> {
-    return this.http.get<MCDUMenu>(this.HOST + 'mcdumenu');
+  loadMCDUMenuPage(): Observable<Display> {
+    return this.http.get<Display>(this.HOST + 'mcdumenu');
+  }
+
+  loadInitAPage(): Observable<Display> {
+    return this.http.get<Display>(this.HOST + 'initapage');
   }
 }

@@ -31,6 +31,11 @@ const routes: Routes = [
   {
     path: 'MCDU_MENU',
     component: MCDUMenuComponent
+  },
+  {
+    path: 'FMGC',
+    redirectTo: 'DIR',
+    pathMatch: 'full'
   }
 ];
 

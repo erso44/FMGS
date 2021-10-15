@@ -5,10 +5,13 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class MCDUMenu {
+public class Display {
 
   private String page;
   private List<String> menuEntriesLeft;
-  private String menuEntryRight;
+  private List<String> menuEntriesRight;
   private String information;
+  private String prevPhase;
+  private String nextPhase;
+
 }

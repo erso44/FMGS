@@ -1,15 +1,15 @@
 package server.builder;
 
-import server.model.MCDUMenu;
+import server.model.Display;
 
 import java.util.List;
 
 public class MCDUMenuBuilder {
 
-  private final MCDUMenu mcduMenu;
+  private final Display mcduMenu;
 
   public MCDUMenuBuilder() {
-    mcduMenu = new MCDUMenu();
+    mcduMenu = new Display();
   }
 
   public MCDUMenuBuilder setPage(String page) {
@@ -22,8 +22,8 @@ public class MCDUMenuBuilder {
     return this;
   }
 
-  public MCDUMenuBuilder setMenuEntryRight(String entry) {
-    mcduMenu.setMenuEntryRight(entry);
+  public MCDUMenuBuilder setMenuEntryRight(List<String> entries) {
+    mcduMenu.setMenuEntriesRight(entries);
     return this;
   }
 
@@ -32,7 +32,7 @@ public class MCDUMenuBuilder {
     return this;
   }
 
-  public MCDUMenu build() {
+  public Display build() {
     return mcduMenu;
   }
 }

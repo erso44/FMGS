@@ -1,15 +1,15 @@
 package server.builder;
 
-import server.model.Dir;
+import server.model.Display;
 
 import java.util.List;
 
 public class DirBuilder {
 
-  private final Dir direction;
+  private final Display direction;
 
   public DirBuilder() {
-    direction = new Dir();
+    direction = new Display();
   }
 
   public DirBuilder setPage(String page) {
@@ -18,16 +18,16 @@ public class DirBuilder {
   }
 
   public DirBuilder setWaypoints(List<String> waypoints) {
-    this.direction.setWaypoints(waypoints);
+    this.direction.setMenuEntriesLeft(waypoints);
     return this;
   }
 
   public DirBuilder setDat(List<String> dats) {
-    this.direction.setDat(dats);
+    this.direction.setMenuEntriesRight(dats);
     return this;
   }
 
-  public Dir build() {
+  public Display build() {
     return direction;
   }
 

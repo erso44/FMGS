@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {ActionService} from "./service/action.service";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'FMGS';
 
+  constructor(private actionService: ActionService) {
+  }
+
   onClick(button: HTMLButtonElement): void {
     console.log('Knopf gedrückt: ' + button.id);
+    this.actionService.handle(button.id);
   }
 }

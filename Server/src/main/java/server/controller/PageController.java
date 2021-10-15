@@ -2,10 +2,9 @@ package server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import server.model.Dir;
-import server.model.MCDUMenu;
-import server.model.Performance;
+import server.model.Display;
 import server.service.DirService;
+import server.service.InitPageService;
 import server.service.MCDUMenuService;
 import server.service.PerformanceService;
 
@@ -20,17 +19,24 @@ public class PageController {
   private PerformanceService performanceService;
   @Autowired
   private MCDUMenuService mcduMenuService;
+  @Autowired
+  private InitPageService initPageService;
 
   @GetMapping( "/dir")
-  public Dir loadDirectionPage() {
+  public Display loadDirectionPage() {
     return dirService.loadDir();
   }
 
   @GetMapping("/perf")
-  public Performance loadPerformancePage() { return performanceService.loadPerformance(); }
+  public Display loadPerformancePage() { return performanceService.loadPerformance(); }
 
   @GetMapping("/mcdumenu")
-  public MCDUMenu loadMCDUMenuPage() {
+  public Display loadMCDUMenuPage() {
     return mcduMenuService.loadMCDUMenu();
+  }
+
+  @GetMapping("/initapage")
+  public Display loadInitApAge() {
+    return initPageService.loadInitAPage();
   }
 }

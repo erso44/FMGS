@@ -2,16 +2,20 @@
 
 <div style="display: grid; grid-template-columns: 12.5rem 12.5rem;">
 
-  <div class="linkeseite">
-    <div *ngFor="let data of menuEntriesLeft; let i = index;">
+  <div id="left" class="linkeseite">
+    <!--div *ngFor="let data of menuEntriesLeft; let i = index;">
       <p *ngIf="i<6" class="schrift">{{data}}</p>
-    </div>
+    </div-->
+    <div id="1L"><p class="schrift">{{menuEntriesLeft[0]}}</p></div>
+    <div id="2L"><p class="schrift">{{menuEntriesLeft[1]}}</p></div>
+    <div id="3L"><p class="schrift">{{menuEntriesLeft[2]}}</p></div>
+    <div id="4L"><p class="schrift">{{menuEntriesLeft[3]}}</p></div>
   </div>
 
 
   <div class="rechteseite">
     <div style="grid-area: 6/1;">
-      <p class="schrift">{{menuEntryRight[0]}}</p>
+      <p class="schrift">{{menuEntriesRight[0]}}</p>
     </div>
   </div>
 

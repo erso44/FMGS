@@ -1,13 +1,13 @@
 package server.builder;
 
-import server.model.Performance;
+import server.model.Display;
 
 public class PerformanceBuilder {
 
-  private final Performance performance;
+  private final Display performance;
 
   public PerformanceBuilder() {
-    performance = new Performance();
+    performance = new Display();
   }
 
   public PerformanceBuilder setPage(String page) {
@@ -25,7 +25,7 @@ public class PerformanceBuilder {
     return this;
   }
 
-  public Performance build() {
+  public Display build() {
     return performance;
   }
 }

@@ -15,8 +15,8 @@ export class DirComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.loadDir().subscribe(value => {
-      this.waypoints = value.waypoints;
-      this.dat = value.dat;
+      this.waypoints = value.menuEntriesLeft;
+      this.dat = value.menuEntriesRight;
       this.page = value.page;
     });
   }
