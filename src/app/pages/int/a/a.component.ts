@@ -65,6 +65,31 @@ export class AComponent implements OnInit {
         if (action === "17M") {
           this.router.navigateByUrl('/INT/INT_B');
         }
+        if (action == "1") {
+
+        } else if (action === "2") {
+
+        } else if (action === "3") {
+
+        } else if (action === "4") {
+
+        } else if (action === "5") {
+
+        } else if (action === "6") {
+
+        } else if (action === "7") {
+
+        } else if (action === "8") {
+
+        } else if (action === "9") {
+
+        } else if (action === "0") {
+
+        } else if (action === "Point") {
+
+        } else if (action === "PlusMinus") {
+
+        }
       }
     });
   }
