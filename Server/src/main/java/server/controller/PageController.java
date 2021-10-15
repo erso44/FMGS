@@ -1,12 +1,10 @@
 package server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import server.model.AircraftStatus;
 import server.model.Display;
+import server.model.Store;
 import server.service.*;
 
 @RestController
@@ -24,6 +22,8 @@ public class PageController {
   private InitPageService initPageService;
   @Autowired
   private AircraftStatusService aircraftStatusService;
+  @Autowired
+  private StoreService storeService;
 
   @GetMapping("/aircraftStatus")
   public AircraftStatus loadAircraftStatus() {
@@ -53,5 +53,10 @@ public class PageController {
   @GetMapping("/initbpage")
   public Display loadInitBPage() {
     return initPageService.loadInitBPage();
+  }
+
+  @PostMapping("/store")
+  public Store store(@RequestBody Store store) {
+    return storeService.save(store);
   }
 }

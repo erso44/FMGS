@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../../service/api.service";
 import {ActionService} from "../../../service/action.service";
 import {Router} from "@angular/router";
+import {StoreService} from "../../../service/store.service";
 
 @Component({
   selector: 'app-a',
@@ -17,7 +18,8 @@ export class AComponent implements OnInit {
 
   constructor(private apiService: ApiService,
               private actionService: ActionService,
-              private router: Router) { }
+              private router: Router,
+              private storeService: StoreService) { }
 
   ngOnInit(): void {
     this.apiService.loadInitAPage().subscribe(value => {
@@ -36,7 +38,10 @@ export class AComponent implements OnInit {
         if (leftElement) {
           if (action === "1L") {
             if (this.store) {
-              this.menuEntriesLeft[0][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[0][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[0][1] = store.value;
+                });
               this.clearStore();
             }
           } else if (action === "2L") {
