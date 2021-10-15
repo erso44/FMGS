@@ -1,12 +1,15 @@
 package server.service;
 
 import org.springframework.stereotype.Service;
+import server.model.Display;
 
 @Service
 public class FlightPhaseService {
-  public String loadFlightPhase() {
+  public Display loadFlightPhase() {
     // return current flight phase
     // this is just an example
-    return "PRE_FLIGHT";
+    Display d = new Display();
+    d.setInformation("PRE_FLIGHT");
+    return d;
   }
 }

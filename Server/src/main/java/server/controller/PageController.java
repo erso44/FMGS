@@ -22,7 +22,7 @@ public class PageController {
   private FlightPhaseService flightPhaseService;
 
   @GetMapping("/flightPhase")
-  public String loadFlightPhase() {
+  public Display loadFlightPhase() {
     return flightPhaseService.loadFlightPhase();
   }
 

@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {AComponent} from "./a/a.component";
 import {BComponent} from "./b/b.component";
+import {FlightPhaseGuard} from "../../guard/FlightPhaseGuard";
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'INT_A',
     component: AComponent,
+    canActivate: [FlightPhaseGuard]
   },
   {
     path: 'INT_B',
@@ -21,6 +23,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [FlightPhaseGuard]
 })
-export class InitRoutingModule { }
+export class InitRoutingModule {
+}
