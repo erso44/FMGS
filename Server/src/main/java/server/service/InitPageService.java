@@ -10,8 +10,6 @@ public class InitPageService {
 
   @Autowired
   private InitPageAssembler initPageAssembler;
-  @Autowired
-  private FlightPhaseService flightPhaseService;
 
   public Display loadInitAPage() {
     return initPageAssembler.assembleDefaultPageA();

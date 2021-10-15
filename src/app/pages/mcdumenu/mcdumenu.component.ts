@@ -46,8 +46,6 @@ export class MCDUMenuComponent implements OnInit {
 
           } else if (action === "6L") {
 
-          } else {
-            console.log("ERROR");
           }
         }
       }

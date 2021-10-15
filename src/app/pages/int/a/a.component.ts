@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../../service/api.service";
 import {ActionService} from "../../../service/action.service";
-import {AircraftService} from "../../../service/aircraft.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -48,7 +47,7 @@ export class AComponent implements OnInit {
           }
         }
         if (action === "17M") {
-          this.router.navigateByUrl('/INT_B');
+          this.router.navigateByUrl('/INT/INT_B');
         }
       }
     });
