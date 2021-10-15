@@ -8,8 +8,8 @@ import java.util.List;
 public class Display {
 
   private String page;
-  private List<String> menuEntriesLeft;
-  private List<String> menuEntriesRight;
+  private List<List<String>> menuEntriesLeft;
+  private List<List<String>> menuEntriesRight;
   private String information;
   private String prevPhase;
   private String nextPhase;

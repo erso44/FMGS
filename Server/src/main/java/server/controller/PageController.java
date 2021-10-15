@@ -36,7 +36,7 @@ public class PageController {
   }
 
   @GetMapping("/initapage")
-  public Display loadInitApAge() {
+  public Display loadInitAPage() {
     return initPageService.loadInitAPage();
   }
 }

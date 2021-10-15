@@ -17,12 +17,12 @@ public class MCDUMenuBuilder {
     return this;
   }
 
-  public MCDUMenuBuilder setMenuEntriesLeft(List<String> entries) {
+  public MCDUMenuBuilder setMenuEntriesLeft(List<List<String>> entries) {
     mcduMenu.setMenuEntriesLeft(entries);
     return this;
   }
 
-  public MCDUMenuBuilder setMenuEntryRight(List<String> entries) {
+  public MCDUMenuBuilder setMenuEntryRight(List<List<String>> entries) {
     mcduMenu.setMenuEntriesRight(entries);
     return this;
   }

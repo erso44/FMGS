@@ -21,7 +21,7 @@
   grid-template-columns: 11.5rem;
   grid-template-rows: repeat(6, 2.9rem);
   justify-items: start;
-  align-items: center;
+  align-items: start;
 }
 
 .rechteseite {
@@ -29,6 +29,6 @@
   padding-right: 1rem;
   grid-template-columns: 11.5rem;
   grid-template-rows: repeat(6, 2.9rem);
-  align-items: center;
+  align-items: start;
   justify-items: end;
 }

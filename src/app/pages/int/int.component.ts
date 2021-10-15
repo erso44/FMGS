@@ -10,8 +10,8 @@ import {Router} from "@angular/router";
 })
 export class IntComponent implements OnInit {
   page: string = '';
-  menuEntriesLeft: string[] = [];
-  menuEntriesRight: string[] = [];
+  menuEntriesLeft: string[][] = [];
+  menuEntriesRight: string[][] = [];
 
   constructor(private apiService: ApiService,
               private actionService: ActionService,

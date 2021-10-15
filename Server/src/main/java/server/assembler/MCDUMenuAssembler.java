@@ -12,8 +12,15 @@ public class MCDUMenuAssembler {
   public Display assembleDefault() {
     return new MCDUMenuBuilder()
       .setPage("MCDU MENU")
-      .setMenuEntriesLeft(List.of("<FMGC", "<DATA LINK", "<AIDS", "<CFDS [REQ]"))
-      .setMenuEntryRight(List.of("RETURN>"))
+      .setMenuEntriesLeft(
+        List.of(
+          List.of("<FMGC", ""),
+          List.of("<DATA LINK", ""),
+          List.of("<AIDS", ""),
+          List.of("<CFDS [REQ]", "")))
+      .setMenuEntryRight(
+        List.of(
+          List.of("RETURN>", "")))
       .setInformation("SELECT DESIRED SYSTEM.")
       .build();
   }

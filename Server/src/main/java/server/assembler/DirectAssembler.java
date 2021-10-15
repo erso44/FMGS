@@ -12,15 +12,27 @@ public class DirectAssembler {
   public Display assembleFake() {
     return new DirectBuilder()
       .setPage("DIR")
-      .setWaypoints(List.of("WAYPOINT1", "CXR2", "TEESY3", "WEVEL4", "ETG", "MIP", "X", "Y", "Z"))
-      .setDat(List.of("1.4NM", "01 '" + " / " + "'", "DAT3"))
+      .setWaypoints(List.of(
+        List.of("WAYPOINT1", ""),
+        List.of("CXR2", ""),
+        List.of("TEESY3", ""),
+        List.of("WEVEL4", ""),
+        List.of("ETG", ""),
+        List.of("MIP", ""),
+        List.of("X", ""),
+        List.of("Y", ""),
+        List.of("Z", "")))
+      .setDat(List.of(
+        List.of("1.4NM", ""),
+        List.of("01 '" + " / " + "'", ""),
+        List.of("DAT3", "")))
       .build();
   }
 
   public Display assembleDefault() {
     return new DirectBuilder()
       .setPage("DIR")
-      .setWaypoints(List.of(dirTo()))
+      .setWaypoints(List.of(List.of(dirTo())))
       .build();
   }
 

@@ -8,7 +8,7 @@ import {ApiService} from "../../service/api.service";
 })
 export class PerfComponent implements OnInit {
   rightside: string[] = [];
-  leftside: string[] = [];
+  leftside: string[][] = [];
   page: string = '';
   prevPage: string = '';
   nextPage: string = '';

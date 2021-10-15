@@ -7,8 +7,8 @@ import {ApiService} from "../../service/api.service";
   styleUrls: ['./dir.component.css']
 })
 export class DirComponent implements OnInit {
-  waypoints: string[] = [];
-  dat: string[] = [];
+  waypoints: string[][] = [];
+  dat: string[][] = [];
   page: string = '';
 
   constructor(private apiService: ApiService) { }

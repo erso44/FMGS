@@ -10,8 +10,8 @@ import {Router} from "@angular/router";
 })
 export class MCDUMenuComponent implements OnInit {
   page: string = '';
-  menuEntriesLeft: string[] = [];
-  menuEntriesRight: string[] = [];
+  menuEntriesLeft: string[][] = [];
+  menuEntriesRight: string[][] = [];
   information: string = '';
 
   constructor(private apiService: ApiService,

@@ -17,12 +17,12 @@ public class DirectBuilder {
     return this;
   }
 
-  public DirectBuilder setWaypoints(List<String> waypoints) {
+  public DirectBuilder setWaypoints(List<List<String>> waypoints) {
     this.direction.setMenuEntriesLeft(waypoints);
     return this;
   }
 
-  public DirectBuilder setDat(List<String> dats) {
+  public DirectBuilder setDat(List<List<String>> dats) {
     this.direction.setMenuEntriesRight(dats);
     return this;
   }

@@ -12,12 +12,12 @@ public class PageBuilder {
     this.page = new Display();
   }
 
-  public PageBuilder setMenuEntriesLeft(List<String> entries) {
+  public PageBuilder setMenuEntriesLeft(List<List<String>> entries) {
     this.page.setMenuEntriesLeft(entries);
     return this;
   }
 
-  public PageBuilder setMenuEntriesRight(List<String> entries) {
+  public PageBuilder setMenuEntriesRight(List<List<String>> entries) {
     this.page.setMenuEntriesRight(entries);
     return this;
   }
