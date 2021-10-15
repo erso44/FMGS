@@ -30,4 +30,26 @@ public class InitPageAssembler {
       .setPage("INIT A")
       .build();
   }
+
+  public Display assembleDefaultPageB() {
+    return new PageBuilder()
+      .setMenuEntriesLeft(
+        List.of(
+          List.of("CO RTE", "[][][][][][]"),
+          List.of("ALTN/CO RTE", "____ ______"),
+          List.of("FLT NBR", "[][][][][][]"),
+          List.of("LAT", "____ __"),
+          List.of("COST INDEX", "___"),
+          List.of("CRT FL/TEMP", "_____ /___°")))
+      .setMenuEntriesRight(
+        List.of(
+          List.of("FROM/TO", "[][][]/[][][]"),
+          List.of("INIT", "REQUEST*"),
+          List.of("", ""),
+          List.of("LONG", "_____ __"),
+          List.of("WIND>", ""),
+          List.of("", "")))
+      .setPage("INIT B")
+      .build();
+  }
 }

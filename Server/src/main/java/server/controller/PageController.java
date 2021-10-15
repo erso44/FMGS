@@ -41,6 +41,6 @@ public class PageController {
 
   @GetMapping("/initapage")
   public Display loadInitAPage() {
-    return initPageService.loadInitAPage();
+    return initPageService.loadInitPage();
   }
 }
