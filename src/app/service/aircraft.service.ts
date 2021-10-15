@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -6,9 +6,7 @@ import { Injectable } from '@angular/core';
 export class AircraftService {
 
   private _flightPhase: string = '';
-
-  constructor() { }
-
+  private _engines: boolean = false;
 
   get flightPhase(): string {
     return this._flightPhase;
@@ -16,5 +14,14 @@ export class AircraftService {
 
   set flightPhase(value: string) {
     this._flightPhase = value;
+  }
+
+
+  get engines(): boolean {
+    return this._engines;
+  }
+
+  set engines(value: boolean) {
+    this._engines = value;
   }
 }

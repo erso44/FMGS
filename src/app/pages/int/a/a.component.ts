@@ -30,6 +30,7 @@ export class AComponent implements OnInit {
   private subscribeToAction() {
     this.actionService.action.subscribe(action => {
       const leftElement = document.getElementById("left");
+      const rightElement = document.getElementById("right");
       if (action) {
         if (leftElement) {
           if (action === "1L") {
@@ -44,6 +45,21 @@ export class AComponent implements OnInit {
 
           } else if (action === "6L") {
 
+          }
+        }
+        if (rightElement) {
+          if (action === "1R") {
+
+          } else if (action === "2R") {
+
+          } else if (action === "3R") {
+
+          } else if (action === "4R") {
+
+          } else if (action === "5R") {
+
+          } else if (action === "6R") {
+            this.router.navigateByUrl('/INT/INT_B');
           }
         }
         if (action === "17M") {

@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.loadFlightPhase().subscribe(value => {
-      this.aircraftService.flightPhase = value.information;
+      this.aircraftService.flightPhase = value.flightPhase;
+      this.aircraftService.engines = value.engines;
     });
   }
 }

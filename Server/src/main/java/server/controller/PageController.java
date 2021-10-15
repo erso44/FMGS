@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import server.model.AircraftStatus;
 import server.model.Display;
 import server.service.*;
 
@@ -22,11 +23,11 @@ public class PageController {
   @Autowired
   private InitPageService initPageService;
   @Autowired
-  private FlightPhaseService flightPhaseService;
+  private AircraftStatusService aircraftStatusService;
 
-  @GetMapping("/flightPhase")
-  public Display loadFlightPhase() {
-    return flightPhaseService.loadFlightPhase();
+  @GetMapping("/aircraftStatus")
+  public AircraftStatus loadAircraftStatus() {
+    return aircraftStatusService.loadAircraftStatus();
   }
 
   @GetMapping("/dir")

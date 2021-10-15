@@ -14,19 +14,19 @@ public class InitPageAssembler {
       .setMenuEntriesLeft(
         List.of(
           List.of("CO RTE", "[][][][][][]"),
-          List.of("ALTN/CO RTE", "____ ______"),
+          List.of("ALTN/CO RTE", "---- ------"),
           List.of("FLT NBR", "[][][][][][]"),
-          List.of("LAT", "____ __"),
-          List.of("COST INDEX", "___"),
-          List.of("CRT FL/TEMP", "_____ /___°")))
+          List.of("LAT", "---- --"),
+          List.of("COST INDEX", "---"),
+          List.of("CRZ FL/TEMP", "---- /---°")))
       .setMenuEntriesRight(
         List.of(
           List.of("FROM/TO", "[][][]/[][][]"),
           List.of("INIT", "REQUEST*"),
           List.of("", ""),
-          List.of("LONG", "_____ __"),
+          List.of("LONG", "----- --"),
           List.of("WIND>", ""),
-          List.of("", "")))
+          List.of("NEXT PAGE", "")))
       .setPage("INIT A")
       .build();
   }
@@ -35,20 +35,20 @@ public class InitPageAssembler {
     return new PageBuilder()
       .setMenuEntriesLeft(
         List.of(
-          List.of("", "[][][][][][]"),
-          List.of("", "____ ______"),
-          List.of("", "[][][][][][]"),
-          List.of("", "____ __"),
-          List.of("", "___"),
-          List.of("", "_____ /___°")))
+          List.of("TAXI", "--.-"),
+          List.of("TRIP/TIME", "--.-/----"),
+          List.of("RTE RSV/%", "--.-/-.-"),
+          List.of("ALTN/TIME", "--./----"),
+          List.of("FINAL/TIME", "--.-/----"),
+          List.of("EXTRA/TIME", "--.-/----")))
       .setMenuEntriesRight(
         List.of(
-          List.of("", "[][][]/[][][]"),
-          List.of("", "REQUEST*"),
+          List.of("ZFWCG/ ZFW", "[][][]/[][].[]"),
           List.of("", ""),
-          List.of("", "_____ __"),
-          List.of(">", ""),
-          List.of("", "")))
+          List.of("", ""),
+          List.of("TOW", "---.-"),
+          List.of("LW", "---.-"),
+          List.of("PREVIOUS PAGE", "")))
       .setPage("INIT B")
       .build();
   }

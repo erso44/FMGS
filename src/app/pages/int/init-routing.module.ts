@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AComponent} from "./a/a.component";
 import {BComponent} from "./b/b.component";
-import {FlightPhaseGuard} from "../../guard/FlightPhaseGuard";
+import {AircraftStatus} from "../../guard/aircraft-status.service";
 
 const routes: Routes = [
   {
@@ -13,18 +13,19 @@ const routes: Routes = [
   {
     path: 'INT_A',
     component: AComponent,
-    canActivate: [FlightPhaseGuard]
+    // canActivate: [AircraftStatus.flightPhase]
   },
   {
     path: 'INT_B',
-    component: BComponent
+    component: BComponent,
+    // canActivate: [AircraftStatus.flightPhase, AircraftStatus.engines]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
-  providers: [FlightPhaseGuard]
+  providers: [AircraftStatus]
 })
 export class InitRoutingModule {
 }

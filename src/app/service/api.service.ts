@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Display} from "../model/Display";
+import {AircraftStatus} from "../model/AircraftStatus";
 
 @Injectable({
   providedIn: 'root'
@@ -33,7 +34,7 @@ export class ApiService {
     return this.http.get<Display>(this.HOST + 'initbpage');
   }
 
-  loadFlightPhase(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'flightPhase');
+  loadFlightPhase(): Observable<AircraftStatus> {
+    return this.http.get<AircraftStatus>(this.HOST + 'aircraftStatus');
   }
 }
