@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 import server.assembler.InitPageAssembler;
 import server.model.Display;
 
-import static server.constants.FlightPhase.PRE_FLIGHT;
-
 @Service
 public class InitPageService {
 
@@ -15,10 +13,11 @@ public class InitPageService {
   @Autowired
   private FlightPhaseService flightPhaseService;
 
-  public Display loadInitPage() {
-    if (flightPhaseService.loadFlightPhase().getInformation().equals(PRE_FLIGHT)) {
-      return initPageAssembler.assembleDefaultPageA();
-    }
+  public Display loadInitAPage() {
+    return initPageAssembler.assembleDefaultPageA();
+  }
+
+  public Display loadInitBPage() {
     return initPageAssembler.assembleDefaultPageB();
   }
 }

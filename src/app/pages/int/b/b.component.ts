@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiService} from "../../../service/api.service";
 import {ActionService} from "../../../service/action.service";
 import {AircraftService} from "../../../service/aircraft.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-b',
@@ -16,10 +17,10 @@ export class BComponent implements OnInit {
 
   constructor(private apiService: ApiService,
               private actionService: ActionService,
-              private aircraftService: AircraftService) { }
+              private router: Router) { }
 
   ngOnInit(): void {
-    this.apiService.loadInitAPage().subscribe(value => {
+    this.apiService.loadInitBPage().subscribe(value => {
       this.page = value.page;
       this.menuEntriesLeft = value.menuEntriesLeft;
       this.menuEntriesRight = value.menuEntriesRight;
@@ -44,9 +45,10 @@ export class BComponent implements OnInit {
 
           } else if (action === "6L") {
 
-          } else {
-            console.log("ERROR");
           }
+        }
+        if (action === "15M") {
+          this.router.navigateByUrl('/INT_A');
         }
       }
     });

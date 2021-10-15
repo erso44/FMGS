@@ -1,7 +1,10 @@
 package server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import server.model.Display;
 import server.service.*;
 
@@ -26,13 +29,15 @@ public class PageController {
     return flightPhaseService.loadFlightPhase();
   }
 
-  @GetMapping( "/dir")
+  @GetMapping("/dir")
   public Display loadDirectionPage() {
     return directService.loadDir();
   }
 
   @GetMapping("/perf")
-  public Display loadPerformancePage() { return performanceService.loadPerformance(); }
+  public Display loadPerformancePage() {
+    return performanceService.loadPerformance();
+  }
 
   @GetMapping("/mcdumenu")
   public Display loadMCDUMenuPage() {
@@ -41,6 +46,11 @@ public class PageController {
 
   @GetMapping("/initapage")
   public Display loadInitAPage() {
-    return initPageService.loadInitPage();
+    return initPageService.loadInitAPage();
+  }
+
+  @GetMapping("/initbpage")
+  public Display loadInitBPage() {
+    return initPageService.loadInitBPage();
   }
 }

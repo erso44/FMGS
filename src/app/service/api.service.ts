@@ -29,6 +29,10 @@ export class ApiService {
     return this.http.get<Display>(this.HOST + 'initapage');
   }
 
+  loadInitBPage(): Observable<Display> {
+    return this.http.get<Display>(this.HOST + 'initbpage');
+  }
+
   loadFlightPhase(): Observable<Display> {
     return this.http.get<Display>(this.HOST + 'flightPhase');
   }
