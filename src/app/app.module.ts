@@ -9,7 +9,7 @@ import {PROGComponent} from "./pages/prog/prog.component";
 import {HttpClientModule} from "@angular/common/http";
 import {PerfComponent} from './pages/perf/perf.component';
 import {MCDUMenuComponent} from './pages/mcdumenu/mcdumenu.component';
-import {InitModule} from "./pages/int/init.module";
+import {IntComponent} from "./pages/int/int.component";
 
 @NgModule({
   declarations: [
@@ -18,13 +18,13 @@ import {InitModule} from "./pages/int/init.module";
     PROGComponent,
     PerfComponent,
     MCDUMenuComponent,
+    IntComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    InitModule
   ],
   providers: [],
   bootstrap: [AppComponent]
