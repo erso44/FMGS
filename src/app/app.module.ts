@@ -8,8 +8,8 @@ import {DirComponent} from "./pages/dir/dir.component";
 import {PROGComponent} from "./pages/prog/prog.component";
 import {HttpClientModule} from "@angular/common/http";
 import {PerfComponent} from './pages/perf/perf.component';
-import {IntComponent} from './pages/int/int.component';
 import {MCDUMenuComponent} from './pages/mcdumenu/mcdumenu.component';
+import {InitModule} from "./pages/int/init.module";
 
 @NgModule({
   declarations: [
@@ -17,14 +17,14 @@ import {MCDUMenuComponent} from './pages/mcdumenu/mcdumenu.component';
     DirComponent,
     PROGComponent,
     PerfComponent,
-    IntComponent,
-    MCDUMenuComponent
+    MCDUMenuComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InitModule
   ],
   providers: [],
   bootstrap: [AppComponent]

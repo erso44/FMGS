@@ -1,9 +1,8 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {DirComponent} from "./pages/dir/dir.component";
 import {PROGComponent} from "./pages/prog/prog.component";
 import {PerfComponent} from "./pages/perf/perf.component";
-import {IntComponent} from "./pages/int/int.component";
 import {MCDUMenuComponent} from "./pages/mcdumenu/mcdumenu.component";
 
 const routes: Routes = [
@@ -26,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'INT',
-    component: IntComponent
+    loadChildren: () => import('./pages/int/init.module').then(m => m.InitModule)
   },
   {
     path: 'MCDU_MENU',
@@ -47,4 +46,5 @@ const routes: Routes = [
     })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
