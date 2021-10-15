@@ -3,7 +3,7 @@ package server.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import server.model.Display;
-import server.service.DirService;
+import server.service.DirectService;
 import server.service.InitPageService;
 import server.service.MCDUMenuService;
 import server.service.PerformanceService;
@@ -14,7 +14,7 @@ import server.service.PerformanceService;
 public class PageController {
 
   @Autowired
-  private DirService dirService;
+  private DirectService directService;
   @Autowired
   private PerformanceService performanceService;
   @Autowired
@@ -24,7 +24,7 @@ public class PageController {
 
   @GetMapping( "/dir")
   public Display loadDirectionPage() {
-    return dirService.loadDir();
+    return directService.loadDir();
   }
 
   @GetMapping("/perf")
