@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ApiService} from "../../../service/api.service";
 import {ActionService} from "../../../service/action.service";
 import {Router} from "@angular/router";
@@ -19,7 +19,8 @@ export class AComponent implements OnInit {
   constructor(private apiService: ApiService,
               private actionService: ActionService,
               private router: Router,
-              private storeService: StoreService) { }
+              private storeService: StoreService) {
+  }
 
   ngOnInit(): void {
     this.apiService.loadInitAPage().subscribe(value => {
@@ -46,27 +47,42 @@ export class AComponent implements OnInit {
             }
           } else if (action === "2L") {
             if (this.store) {
-              this.menuEntriesLeft[1][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[1][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[1][1] = store.value;
+                });
               this.clearStore();
             }
           } else if (action === "3L") {
             if (this.store) {
-              this.menuEntriesLeft[2][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[2][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[2][1] = store.value;
+                });
               this.clearStore();
             }
           } else if (action === "4L") {
             if (this.store) {
-              this.menuEntriesLeft[3][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[3][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[3][1] = store.value;
+                });
               this.clearStore();
             }
           } else if (action === "5L") {
             if (this.store) {
-              this.menuEntriesLeft[4][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[4][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[4][1] = store.value;
+                });
               this.clearStore();
             }
           } else if (action === "6L") {
             if (this.store) {
-              this.menuEntriesLeft[5][1] = this.store;
+              this.storeService.save(this.page, this.menuEntriesLeft[5][0], this.store)
+                .subscribe(store => {
+                  this.menuEntriesLeft[5][1] = store.value;
+                });
               this.clearStore();
             }
           }
@@ -83,7 +99,7 @@ export class AComponent implements OnInit {
           } else if (action === "5R") {
 
           } else if (action === "6R") {
-            this.router.navigateByUrl('/INT/INT_B');
+            // this.router.navigateByUrl('/INT/INT_B'); //TODO results in loop. why ?
           }
         }
         if (action === "17M") {
@@ -114,7 +130,13 @@ export class AComponent implements OnInit {
         } else if (action === "PlusMinus") {
           this.store = this.store + action;
         } else if (action === "Clear") {
-          this.store = this.store.substring(0, this.store.length - 1);
+          if (this.store === 'CLR') {
+            this.store = '';
+          } else if (this.store) {
+            this.store = this.store.substring(0, this.store.length - 1);
+          } else {
+            this.store = 'CLR';
+          }
         }
       }
     });
