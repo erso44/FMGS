@@ -35,17 +35,35 @@ export class AComponent implements OnInit {
       if (action) {
         if (leftElement) {
           if (action === "1L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[0][1] = this.store;
+              this.clearStore();
+            }
           } else if (action === "2L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[1][1] = this.store;
+              this.clearStore();
+            }
           } else if (action === "3L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[2][1] = this.store;
+              this.clearStore();
+            }
           } else if (action === "4L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[3][1] = this.store;
+              this.clearStore();
+            }
           } else if (action === "5L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[4][1] = this.store;
+              this.clearStore();
+            }
           } else if (action === "6L") {
-
+            if (this.store) {
+              this.menuEntriesLeft[5][1] = this.store;
+              this.clearStore();
+            }
           }
         }
         if (rightElement) {
@@ -95,6 +113,10 @@ export class AComponent implements OnInit {
         }
       }
     });
+  }
+
+  clearStore(): void {
+    this.store = '';
   }
 
 }
