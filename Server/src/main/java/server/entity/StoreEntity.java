@@ -1,12 +1,16 @@
 package server.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Table(schema = "fmgs", name = "fmgs_store")
 @Entity
-@Data
+@Getter
+@Setter
 public class StoreEntity {
 
   @Id

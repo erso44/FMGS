@@ -10,6 +10,11 @@ public class StoreEntityBuilder {
     this.storeEntity = new StoreEntity();
   }
 
+  public StoreEntityBuilder setUUID(String uuid) {
+    this.storeEntity.setUuid(uuid);
+    return this;
+  }
+
   public StoreEntityBuilder setPage(String page) {
     this.storeEntity.setPage(page);
     return this;
