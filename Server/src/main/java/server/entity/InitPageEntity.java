@@ -23,6 +23,5 @@ public class InitPageEntity {
   private String COST_INDEX;
   private String CRZ_FL_TEMP;
   private String FROM_TO;
-  private String LONG;
-  private String WIND;
+  private String LONGITUDE;
 }

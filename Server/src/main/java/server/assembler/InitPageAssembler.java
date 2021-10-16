@@ -69,7 +69,7 @@ public class InitPageAssembler {
           List.of("FROM/TO", initPageEntity.getFROM_TO()),
           List.of("INIT", "REQUEST*"),
           List.of("", ""),
-          List.of("LONG", initPageEntity.getLONG()),
+          List.of("LONG", initPageEntity.getLONGITUDE()),
           List.of("WIND>", ""),
           List.of("NEXT PAGE", "")))
       .setPage("INIT A")

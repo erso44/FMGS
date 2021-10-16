@@ -41,9 +41,7 @@ public class StoreService {
       } else if (store.getElement().equals("FROM TO")) {
         initPageEntity.setFROM_TO(store.getElement());
       } else if (store.getElement().equals("LONG")) {
-        initPageEntity.setLONG(store.getElement());
-      } else if (store.getElement().equals("WIND")) {
-
+        initPageEntity.setLONGITUDE(store.getElement());
       }
 
       initRepository.save(initPageEntity);
