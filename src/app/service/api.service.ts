@@ -1,17 +1,19 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Display} from "../model/Display";
 import {AircraftStatus} from "../model/AircraftStatus";
+import {UserService} from "./user.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  HOST_PAGES = 'http://localhost:8080/api/pages';
+  HOST_PAGES = 'http://localhost:8080/api/page/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private userService: UserService) {
   }
 
   loadDir(): Observable<Display> {
@@ -27,7 +29,9 @@ export class ApiService {
   }
 
   loadInitAPage(): Observable<Display> {
-    return this.http.get<Display>(this.HOST_PAGES + 'initapage');
+    let params = new HttpParams();
+    params = params.set('uuid', this.userService.user.uuid);
+    return this.http.get<Display>(this.HOST_PAGES + 'initapage', {params});
   }
 
   loadInitBPage(): Observable<Display> {

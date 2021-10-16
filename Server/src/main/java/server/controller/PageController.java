@@ -1,5 +1,6 @@
 package server.controller;
 
+import com.sun.istack.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import server.model.AircraftStatus;
@@ -50,7 +51,7 @@ public class PageController {
   }
 
   @GetMapping("/initapage")
-  public Display loadInitAPage(@RequestParam String uuid) {
+  public Display loadInitAPage(@RequestParam @NotNull String uuid) {
     return initPageService.loadInitAPage(uuid);
   }
 

@@ -20,14 +20,14 @@ public class UserService {
   private UserAssembler userAssembler;
 
   public User loadUser(String uuid) {
-    Optional<UserEntity> userEntityOptional = userRepository.findById(uuid);
-
     UserEntity userEntity;
-    if (userEntityOptional.isEmpty()) {
+
+    if (uuid == null) {
       userEntity = new UserEntityBuilder()
         .setUUID(createUUID())
         .build();
     } else {
+      Optional<UserEntity> userEntityOptional = userRepository.findById(uuid);
       userEntity = userEntityOptional.get();
     }
 

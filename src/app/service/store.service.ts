@@ -9,7 +9,7 @@ import {UserService} from "./user.service";
 })
 export class StoreService {
 
-  HOST_PAGES = 'http://localhost:8080/api/page'
+  HOST_PAGES = 'http://localhost:8080/api/page/'
 
   constructor(private http: HttpClient,
               private userService: UserService) { }

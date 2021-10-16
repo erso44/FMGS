@@ -10,7 +10,7 @@ export class UserService {
 
   HOST_USER = 'http://localhost:8080/api/user';
 
-  user: User | undefined;
+  user!: User;
 
   constructor(private http: HttpClient) {
     this.loadUser().subscribe(value => {

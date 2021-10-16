@@ -44,6 +44,7 @@ public class StoreService {
         initPageEntity.setLONGITUDE(store.getElement());
       }
 
+      initPageEntity.setUserUUID(store.getUserUUID());
       initRepository.save(initPageEntity);
     }
 
