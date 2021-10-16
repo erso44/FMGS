@@ -2,6 +2,7 @@ package server.assembler;
 
 import org.springframework.stereotype.Component;
 import server.builder.PageBuilder;
+import server.entity.InitPageEntity;
 import server.model.Display;
 
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 @Component
 public class InitPageAssembler {
 
-  public Display assembleDefaultPageA() {
+  public Display assembleEmptyPageA() {
     return new PageBuilder()
       .setMenuEntriesLeft(
         List.of(
@@ -50,6 +51,28 @@ public class InitPageAssembler {
           List.of("LW", "---.-"),
           List.of("PREVIOUS PAGE", "")))
       .setPage("INIT B")
+      .build();
+  }
+
+  public Display transformAPage(InitPageEntity initPageEntity) {
+    return new PageBuilder()
+      .setMenuEntriesLeft(
+        List.of(
+          List.of("CO RTE", initPageEntity.getCO_RTE()),
+          List.of("ALTN/CO RTE", initPageEntity.getALTN_CO_RTE()),
+          List.of("FLT NBR", initPageEntity.getFLT_NBR()),
+          List.of("LAT", initPageEntity.getLAT()),
+          List.of("COST INDEX", initPageEntity.getCOST_INDEX()),
+          List.of("CRZ FL/TEMP", initPageEntity.getCRZ_FL_TEMP())))
+      .setMenuEntriesRight(
+        List.of(
+          List.of("FROM/TO", initPageEntity.getFROM_TO()),
+          List.of("INIT", "REQUEST*"),
+          List.of("", ""),
+          List.of("LONG", initPageEntity.getLONG()),
+          List.of("WIND>", ""),
+          List.of("NEXT PAGE", "")))
+      .setPage("INIT A")
       .build();
   }
 }

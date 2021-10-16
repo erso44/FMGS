@@ -12,7 +12,7 @@ import server.service.pages.MCDUMenuService;
 import server.service.pages.PerformanceService;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping(value = "/api/page")
 @CrossOrigin(origins = "*")
 public class PageController {
 
@@ -50,8 +50,8 @@ public class PageController {
   }
 
   @GetMapping("/initapage")
-  public Display loadInitAPage() {
-    return initPageService.loadInitAPage();
+  public Display loadInitAPage(@RequestParam String uuid) {
+    return initPageService.loadInitAPage(uuid);
   }
 
   @GetMapping("/initbpage")

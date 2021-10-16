@@ -8,4 +8,5 @@ public class Store {
   private String page;
   private String element;
   private String value;
+  private String userUUID;
 }

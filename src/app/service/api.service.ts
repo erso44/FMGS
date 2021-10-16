@@ -9,32 +9,32 @@ import {AircraftStatus} from "../model/AircraftStatus";
 })
 export class ApiService {
 
-  HOST = 'http://localhost:8080/api/'
+  HOST_PAGES = 'http://localhost:8080/api/pages';
 
   constructor(private http: HttpClient) {
   }
 
   loadDir(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'dir');
+    return this.http.get<Display>(this.HOST_PAGES + 'dir');
   }
 
   loadPerformancePage(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'perf');
+    return this.http.get<Display>(this.HOST_PAGES + 'perf');
   }
 
   loadMCDUMenuPage(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'mcdumenu');
+    return this.http.get<Display>(this.HOST_PAGES + 'mcdumenu');
   }
 
   loadInitAPage(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'initapage');
+    return this.http.get<Display>(this.HOST_PAGES + 'initapage');
   }
 
   loadInitBPage(): Observable<Display> {
-    return this.http.get<Display>(this.HOST + 'initbpage');
+    return this.http.get<Display>(this.HOST_PAGES + 'initbpage');
   }
 
   loadFlightPhase(): Observable<AircraftStatus> {
-    return this.http.get<AircraftStatus>(this.HOST + 'aircraftStatus');
+    return this.http.get<AircraftStatus>(this.HOST_PAGES + 'aircraftStatus');
   }
 }

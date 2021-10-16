@@ -7,16 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(schema = "fmgs", name = "fmgs_store")
+@Table(schema = "fmgs", name = "user")
 @Entity
 @Getter
 @Setter
-public class StoreEntity {
+public class UserEntity {
 
   @Id
   private String uuid;
-
-  private String page;
-  private String element;
-  private String value;
 }
