@@ -2,6 +2,7 @@ package server.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import server.assembler.InitPageEntityAssembler;
 import server.entity.InitPageEntity;
 import server.model.Store;
 import server.repository.InitRepository;
@@ -13,13 +14,15 @@ public class StoreService {
 
   @Autowired
   private InitRepository initRepository;
+  @Autowired
+  private InitPageEntityAssembler initPageEntityAssembler;
 
   public Store save(Store store) {
     Optional<InitPageEntity> initPageEntityOptional = initRepository.findById(store.getUserUUID());
 
     InitPageEntity initPageEntity;
     if (initPageEntityOptional.isEmpty()) {
-      initPageEntity = new InitPageEntity();
+      initPageEntity = initPageEntityAssembler.assembleEmptyInitPage();
     } else {
       initPageEntity = initPageEntityOptional.get();
     }

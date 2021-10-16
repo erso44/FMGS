@@ -61,7 +61,7 @@ public class PageController {
   }
 
   @PostMapping("/store")
-  public Store store(@RequestBody Store store) {
+  public Store store(@RequestBody @NotNull Store store) {
     return storeService.save(store);
   }
 }
