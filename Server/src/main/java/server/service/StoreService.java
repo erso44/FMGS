@@ -24,21 +24,30 @@ public class StoreService {
       initPageEntity = initPageEntityOptional.get();
     }
 
-    if (store.getPage().equals("INIT A")) {
+    if (store.getPage().equals("INIT A") || store.getPage().equals("INIT B")) {
 
-      if (store.getElement().equals("FLT NBR")) {
+      if (store.getElement().equals("CO RTE")) {
+        initPageEntity.setCO_RTE(store.getElement());
+      } else if (store.getElement().equals("ALTN_CO_RTE")) {
+        initPageEntity.setALTN_CO_RTE(store.getElement());
+      } else if (store.getElement().equals("FLT NBR")) {
         initPageEntity.setFLT_NBR(store.getElement());
-      } else if (store.getElement().equals("")) {
+      } else if (store.getElement().equals("LAT")) {
+        initPageEntity.setLAT(store.getElement());
+      } else if (store.getElement().equals("COST INDEX")) {
+        initPageEntity.setCOST_INDEX(store.getElement());
+      } else if (store.getElement().equals("CRZ FL TEMP")) {
+        initPageEntity.setCRZ_FL_TEMP(store.getElement());
+      } else if (store.getElement().equals("FROM TO")) {
+        initPageEntity.setFROM_TO(store.getElement());
+      } else if (store.getElement().equals("LONG")) {
+        initPageEntity.setLONG(store.getElement());
+      } else if (store.getElement().equals("WIND")) {
 
       }
 
-
       initRepository.save(initPageEntity);
-
-    } else if (store.getPage().equals("INIT B")) {
-
     }
-
 
     return store;
   }
